@@ -5,6 +5,8 @@
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
+  // Parte 1 - Nivel Novato
+
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
   // Carta 1
@@ -85,6 +87,40 @@ int main() {
   printf("Area (km2): %.2f\n", area2);
   printf("PIB: %.2f\n", pib2);
   printf("Pontos Turisticos: %d\n", pontos_turisticos2);
+
+  //Parte 2 - Nivel Aventureiro
+
+  // Cálculo e exibição da densidade demográfica (população/área)
+  float densidade1 = populacao1 / area1; // Densidade demográfica da carta 1
+  float densidade2 = populacao2 / area2; // Densidade demográfica da carta 2
+  printf("\n--- Densidade Demografica ---\n");
+  printf("Densidade da Carta 1 (%s): %.2f hab/km2\n", cidade1, densidade1);
+  printf("Densidade da Carta 2 (%s): %.2f hab/km2\n", cidade2, densidade2); 
+
+  // Cálculo e exibição do PIB per capita (PIB/população)
+  float pib_per_capita1 = pib1 / populacao1; // PIB per capita da carta 1
+  float pib_per_capita2 = pib2 / populacao2; // PIB per capita da carta 2
+  printf("\n--- PIB per Capita ---\n");
+  printf("PIB per Capita da Carta 1 (%s): %.2f\n", cidade1, pib_per_capita1);
+  printf("PIB per Capita da Carta 2 (%s): %.2f\n", cidade2, pib_per_capita2); 
+
+  // parte 3 - Nivel Mestre
+   
+  float super_trunfo1 = (pontos_turisticos1 * 2) + (pib_per_capita1 * 0.5) + (densidade1 * 0.3);
+  float super_trunfo2 = (pontos_turisticos2 * 2) + (pib_per_capita2 * 0.5) + (densidade2 * 0.3);
+  printf("\n--- Pontuacao Super Trunfo ---\n");
+  printf("Pontuacao Super Trunfo da Carta 1 (%s): %.2f\n", cidade1, super_trunfo1);
+  printf("Pontuacao Super Trunfo da Carta 2 (%s): %.2f\n", cidade2, super_trunfo2); 
+
+  // Comparação entre as duas cidades com base em um critério escolhido (população, área, PIB ou pontos turísticos)
+  printf("\n--- Comparacao entre as Cidades ---\n");
+  if (populacao1 > populacao2) {
+    printf("A cidade com maior populacao e %s com %lld habitantes.\n", cidade1, populacao1);
+  } else if (populacao2 > populacao1) {
+    printf("A cidade com maior populacao e %s com %lld habitantes.\n", cidade2, populacao2);
+  } else {
+    printf("As duas cidades tem a mesma populacao de %lld habitantes.\n", populacao1);
+  } 
 
 return 0;
 } 
