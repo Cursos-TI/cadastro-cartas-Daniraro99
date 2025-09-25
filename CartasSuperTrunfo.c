@@ -8,6 +8,7 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
   // Carta 1
+  char estado1[60];           // Nome do estado
   char codigo_carta1[10];     // Código da carta (ex: A01)
   char cidade1[50];           // Nome da cidade
   long long populacao1;       // População (usando long long para números grandes)
@@ -16,6 +17,7 @@ int main() {
   int pontos_turisticos1;     // Número de pontos turísticos
 
   // Carta 2
+  char estado2[60];           // Nome do estado
   char codigo_carta2[10];     // Código da carta (ex: B02)
   char cidade2[50];           // Nome da cidade
   long long populacao2;       // População (usando long long para números grandes)
@@ -27,30 +29,34 @@ int main() {
 
   // Carta 1
   printf("--- Cadastro da Carta 1 ---\n");
+  printf("Digite o nome do estado (A-H): ");
+  scanf(" %59[^\n]", estado1); // Lê a linha inteira, incluindo espaços
   printf("Digite o codigo da carta (ex: A01): ");
   scanf("%s", codigo_carta1);
   printf("Digite o nome da cidade: ");
   scanf(" %49[^\n]", cidade1); // Lê a linha inteira, incluindo espaços
   printf("Digite a populacao: ");
   scanf("%lld", &populacao1);
-  printf("Digite a area em km2: ");
+  printf("Digite a area em km2 (Use ponto em vez de virgula): ");
   scanf("%f", &area1);
-  printf("Digite o PIB: ");
+  printf("Digite o PIB (Use ponto em vez de virgula): ");
   scanf("%f", &pib1);
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontos_turisticos1);
 
   // Carta 2
   printf("\n--- Cadastro da Carta 2 ---\n");
+  printf("Digite o nome do estado (A-H): ");
+  scanf(" %59[^\n]", estado2); // Lê a linha inteira, incluindo espaços
   printf("Digite o codigo da carta (ex: B02): ");
   scanf("%s", codigo_carta2);
   printf("Digite o nome da cidade: ");
   scanf(" %49[^\n]", cidade2);
   printf("Digite a populacao: ");
   scanf("%lld", &populacao2);
-  printf("Digite a area em km2: ");
+  printf("Digite a area em km2 (Use ponto em vez de virgula): ");
   scanf("%f", &area2);
-  printf("Digite o PIB: ");
+  printf("Digite o PIB (Use ponto em vez de virgula): ");
   scanf("%f", &pib2);
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontos_turisticos2);
@@ -62,6 +68,7 @@ int main() {
 
   // Carta 1
   printf("--- Carta 1 ---\n");
+  printf("Estado: %s\n", estado1);
   printf("Codigo: %s\n", codigo_carta1);
   printf("Cidade: %s\n", cidade1);
   printf("Populacao: %lld\n", populacao1);
@@ -71,6 +78,7 @@ int main() {
 
   // Carta 2
   printf("--- Carta 2 ---\n");
+  printf("Estado: %s\n", estado2);
   printf("Codigo: %s\n", codigo_carta2);
   printf("Cidade: %s\n", cidade2);
   printf("Populacao: %lld\n", populacao2);
